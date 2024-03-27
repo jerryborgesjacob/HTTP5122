@@ -13,15 +13,11 @@ function go(){
         var welcome = document.getElementById("newMsgBox");
         welcome.innerHTML = "Welcome " + userName;
         
-        /*
-        var color = cookieArray[1].split("=")[2];   
         
-         
-
+        var color = cookieArray[0].split("=")[1];
         
-
         document.body.style.background = color;
-        */
+        
 
         
     
