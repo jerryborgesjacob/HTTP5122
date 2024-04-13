@@ -6,7 +6,7 @@ window.onload = function(){
 
     var APIKey= "3664fc8f8b9de8aa28fd9e00011160b8";
 
-    var api_url = "https://api.openweathermap.org/data/2.5/weather?q=toronto&appid=3664fc8f8b9de8aa28fd9e00011160b8&units=metric";
+    var api_url = "https://api.openweathermap.org/data/2.5/weather?q=toronto&appid="+APIKey+"&units=metric";
 
     var xhr = new XMLHttpRequest();
 
