@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>FIFA Transfer Wishlist</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js""></script>
+
+    </head>
+
+    <body>
+        <header id="header">
+            <h1>FIFA TRANSFER WISHLIST</h1>
+        </header>
+
+        <main>
+            <h2>Add Players</h2>
+            <div class="form-container">
+                <div class="form" id="form1">
+                    <form id="team1" method="post">
+
+                    <div class="element">
+                        <label for="name">Player Name </label>
+                        <input type="text" id="name" name="name">
+                    </div>
+
+                    <div class="element">
+                        <label for="age">Age </label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                    
+                    <div class="element">
+                        <label for="position">Position </label>
+                        <input type="text" id="position" name="position">
+                    </div>
+
+                    <div class="element">    
+                        <label for="pace">Pace </label>
+                        <input type="number" id="pace" name="pace">
+                    </div>
+
+                    <div class="element">    
+                        <label for="shooting">Shooting </label>
+                        <input type="number" id="shooting" name="shooting">
+                    </div>
+                    
+                    <div class="element">
+                        <label for="passing">Passing </label>
+                        <input type="number" id="passing" name="passing">
+                    </div>    
+
+                    <div class="element">
+                        <label for="dribbling">Dribbling </label>
+                        <input type="number" id="dribbling" name="dribbling">
+                    </div>
+
+                    <div class="element">
+                        <label for="defence">Defence </label>
+                        <input type="number" id="defence" name="defence">
+                    </div>
+
+                    <div class="element">
+                        <label for="physical">Physical </label>
+                        <input type="number" id="physical" name="physical">
+                    </div>
+
+                    <button type="button" id="team1submit">ADD PLAYER</button>
+                    </form>
+                    
+                </div>
+
+                <div class="form" id="form2">
+                    <form id="team2">
+
+                    <div class="element">
+                        <label for="name">Player Name </label>
+                        <input type="text" id="name2" name="name">
+                    </div>
+
+                    <div class="element">
+                        <label for="age">Age </label>
+                        <input type="number" id="age2" name="age">
+                    </div>
+                    
+                    <div class="element">
+                        <label for="position">Position </label>
+                        <input type="text" id="position2" name="position">
+                    </div>
+
+                    <div class="element">    
+                        <label for="pace">Pace </label>
+                        <input type="number" id="pace2" name="pace">
+                    </div>
+
+                    <div class="element">    
+                        <label for="shooting">Shooting </label>
+                        <input type="number" id="shooting2" name="shooting">
+                    </div>
+                    
+                    <div class="element">
+                        <label for="passing">Passing </label>
+                        <input type="number" id="passing2" name="passing">
+                    </div>    
+
+                    <div class="element">
+                        <label for="dribbling">Dribbling </label>
+                        <input type="number" id="dribbling2" name="dribbling">
+                    </div>
+
+                    <div class="element">
+                        <label for="defence">Defence </label>
+                        <input type="number" id="defence2" name="defence">
+                    </div>
+
+                    <div class="element">
+                        <label for="physical">Physical </label>
+                        <input type="number" id="physical2" name="physical">
+                    </div>
+
+                    <button type="button" id="team2submit">ADD PLAYER</button>
+                    </form>
+                    
+                </div>
+            </div>
+
+            <h3>Team Lists</h3>
+
+        <div class="form-container">
+            <table class="myTeam1" id="myTeam">
+                <thead>
+                    <tr><th>Select</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Pace</th>
+                        <th>Shooting</th>
+                        <th>Passing</th>
+                        <th>Dribbling</th>
+                        <th>Defence</th>
+                        <th>Physical</th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody id="table1">
+                    
+                </tbody>
+            </table>
+
+            <div class="myTeam1" id="otherTeam">
+                <table class="myTeam1" id="myTeam">
+                    <thead>
+                        <tr><th>Select</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Position</th>
+                            <th>Pace</th>
+                            <th>Shooting</th>
+                            <th>Passing</th>
+                            <th>Dribbling</th>
+                            <th>Defence</th>
+                            <th>Physical</th>
+                        </tr>
+                        
+                    </thead>
+    
+                    <tbody id="table2">
+                        
+                    </tbody>
+                </table>
+    
+            </div>
+            
+        </div>
+
+    <div class="button-flex">
+        <button type="button" id="comparison">COMPARE</button>
+    </div>    
+        <div class="form-container">
+            
+            <div id = "player1">
+
+            </div>
+
+            <div id = "player2">
+                
+            </div>
+        </div>
+
+        </main>
+    </body>
+</html>
