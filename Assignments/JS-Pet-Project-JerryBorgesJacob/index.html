@@ -12,13 +12,16 @@
 
     <body>
         <header id="header">
+            <!--img id="banner" src="football-pitch-banner.svg" alt="top-view of a football pitch"-->
             <h1>FIFA TRANSFER WISHLIST</h1>
         </header>
 
         <main>
-            <h2>Add Players</h2>
+            
             <div class="form-container">
+                
                 <div class="form" id="form1">
+                    <h2>My Players</h2>
                     <form id="team1" method="post">
 
                     <div class="element">
@@ -71,7 +74,10 @@
                     
                 </div>
 
+                <span id="horizontal-line"></span>
+
                 <div class="form" id="form2">
+                    <h2>Wishlist Players</h2>
                     <form id="team2">
 
                     <div class="element">
@@ -125,9 +131,11 @@
                 </div>
             </div>
 
-            <h3>Team Lists</h3>
+        
 
-        <div class="form-container">
+        <div class="table-container">
+            <div class="myTeam1">
+            <h3> My Team</h3>
             <table class="myTeam1" id="myTeam">
                 <thead>
                     <tr><th>Select</th>
@@ -148,9 +156,11 @@
                     
                 </tbody>
             </table>
+        </div>
 
-            <div class="myTeam1" id="otherTeam">
-                <table class="myTeam1" id="myTeam">
+            <div class="myTeam1" >
+                <h3>Wishlist</h3>
+                <table class="myTeam1" id="otherTeam">
                     <thead>
                         <tr><th>Select</th>
                             <th>Name</th>
@@ -189,6 +199,7 @@
             </div>
         </div>
 
+        
         </main>
     </body>
 </html>

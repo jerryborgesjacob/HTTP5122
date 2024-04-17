@@ -127,14 +127,18 @@ window.onload = function(){
         console.log(radio1);
 
         var selected1 = document.getElementById("player1");
-        selected1.innerHTML = `<p>Name: ${playerList[radio1].name} </p> <p>Age: ${playerList[radio1].age} </p> <p>Position: ${playerList[radio1].position} </p>`;
+        selected1.innerHTML = `<p>Name: ${playerList[radio1].name} </p> <p>Age: ${playerList[radio1].age} </p> <p>Position: ${playerList[radio1].position} </p>
+        <p>Pace: ${playerList[radio1].pace} </p><p>Shooting: ${playerList[radio1].shooting} </p><p>Passing: ${playerList[radio1].passing} </p>
+        <p>Dribbling: ${playerList[radio1].dribbling} </p><p>Defence: ${playerList[radio1].defence} </p><p>Physical: ${playerList[radio1].physical} </p>`;
 
         var radio2 = document.querySelector('input[name="compare2"]:checked').value;
 
         console.log(radio2);
 
         var selected2 = document.getElementById("player2");
-        selected2.innerHTML = `<p>Name: ${opponentList[radio2].name} </p> <p>Age: ${opponentList[radio2].age} </p> <p>Position: ${opponentList[radio2].position} </p>`;
+        selected2.innerHTML = `<p>Name: ${opponentList[radio2].name} </p> <p>Age: ${opponentList[radio2].age} </p> <p>Position: ${opponentList[radio2].position} </p>
+        <p>Pace: ${playerList[radio1].pace} </p><p>Shooting: ${playerList[radio1].shooting} </p><p>Passing: ${playerList[radio1].passing} </p>
+        <p>Dribbling: ${playerList[radio1].dribbling} </p><p>Defence: ${playerList[radio1].defence} </p><p>Physical: ${playerList[radio1].physical} </p>`;
 
     } 
    
