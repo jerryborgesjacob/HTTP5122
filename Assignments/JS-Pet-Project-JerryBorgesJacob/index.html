@@ -11,6 +11,7 @@
     </head>
 
     <body>
+        
         <header id="header">
             <!--img id="banner" src="football-pitch-banner.svg" alt="top-view of a football pitch"-->
             <h1>FIFA TRANSFER WISHLIST</h1>
@@ -35,8 +36,29 @@
                     </div>
                     
                     <div class="element">
+                        <!--
                         <label for="position">Position </label>
                         <input type="text" id="position" name="position">
+
+                        -->
+
+                        <label for="position">Position</label> 
+                        <select name="position" id="position"> 
+                            <option value="X">Choose a Position</option>
+                            <option value="ST">ST</option> 
+                            <option value="LW">LW</option> 
+                            <option value="RW">RW</option> 
+                            <option value="CM">CM</option>
+                            <option value="CAM">CAM</option> 
+                            <option value="CDM">CDM</option> 
+                            <option value="RB">RB</option> 
+                            <option value="LB">LB</option>
+                            <option value="CB">CB</option> 
+                            <option value="CF">CF</option> 
+                            <option value="LM">LM</option> 
+                            <option value="RM">RM</option>
+                            <option value="GK">GK</option> 
+                        </select>
                     </div>
 
                     <div class="element">    
@@ -91,8 +113,27 @@
                     </div>
                     
                     <div class="element">
+                        <!--
                         <label for="position">Position </label>
-                        <input type="text" id="position2" name="position">
+                        <input type="text" id="position2" name="position">-->
+
+                        <label for="position">Position</label> 
+                        <select name="position" id="position2"> 
+                            <option value="X">Choose a Position</option>
+                            <option value="ST">ST</option> 
+                            <option value="LW">LW</option> 
+                            <option value="RW">RW</option> 
+                            <option value="CM">CM</option>
+                            <option value="CAM">CAM</option> 
+                            <option value="CDM">CDM</option> 
+                            <option value="RB">RB</option> 
+                            <option value="LB">LB</option>
+                            <option value="CB">CB</option> 
+                            <option value="CF">CF</option> 
+                            <option value="LM">LM</option> 
+                            <option value="RM">RM</option>
+                            <option value="GK">GK</option> 
+                        </select>
                     </div>
 
                     <div class="element">    
@@ -188,13 +229,33 @@
     <div class="button-flex">
         <button type="button" id="comparison">COMPARE</button>
     </div>    
-        <div class="form-container">
+
+        <div class="compare-container">
             
             <div id = "player1">
 
             </div>
 
+            <div id="column-names">
+                <p>NAME</p>
+                <p>AGE</p>
+                <p>POSITION</p>
+                <p>PACE</p>
+                <p>SHOOTING</p>
+                <p>PASSING</p>   
+                <p>DRIBBLING</p>   
+                <p>DEFENCE</p>
+                <p>PHYSICAL</p>
+                <p> OVERALL </p>
+            </div>
+
             <div id = "player2">
+                
+            </div>
+        </div>
+
+        <div class="better-player">
+            <div id="result-display">
                 
             </div>
         </div>

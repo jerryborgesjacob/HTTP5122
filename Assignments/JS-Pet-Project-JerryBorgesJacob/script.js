@@ -24,7 +24,7 @@ window.onload = function(){
     function AddPlayer(){
 
         
-        if (playerList.length === 2){
+        if (playerList.length === 11){
             document.getElementById("form1").innerHTML = "Team is FULL!!";
         }
 
@@ -75,7 +75,7 @@ window.onload = function(){
     function AddOpponent(){
 
         
-        if (opponentList.length === 2){
+        if (opponentList.length === 11){
             document.getElementById("form2").innerHTML = "Team is FULL!!";
         }
 
@@ -118,35 +118,187 @@ window.onload = function(){
 
     var comparison = document.getElementById("comparison");
 
-    comparison.onclick = playerCompare;
+    comparison.onclick = playerCompareDisplay;
 
-    function playerCompare(){
+    function playerCompareDisplay(){
+
 
         var radio1 = document.querySelector('input[name="compare"]:checked').value;
 
         console.log(radio1);
 
+        var myPlayerOverall = Math.ceil((parseInt(playerList[radio1].pace) 
+        + parseInt(playerList[radio1].shooting) 
+        + parseInt(playerList[radio1].passing) 
+        + parseInt(playerList[radio1].dribbling) 
+        + parseInt(playerList[radio1].defence) 
+        + parseInt(playerList[radio1].physical)) / 6);
+
+        console.log("my player overall = " + myPlayerOverall);
+
         var selected1 = document.getElementById("player1");
-        selected1.innerHTML = `<p>Name: ${playerList[radio1].name} </p> <p>Age: ${playerList[radio1].age} </p> <p>Position: ${playerList[radio1].position} </p>
-        <p>Pace: ${playerList[radio1].pace} </p><p>Shooting: ${playerList[radio1].shooting} </p><p>Passing: ${playerList[radio1].passing} </p>
-        <p>Dribbling: ${playerList[radio1].dribbling} </p><p>Defence: ${playerList[radio1].defence} </p><p>Physical: ${playerList[radio1].physical} </p>`;
+        selected1.innerHTML = `<p>${playerList[radio1].name} </p>
+        <p>${playerList[radio1].age} </p>
+        <p>${playerList[radio1].position} </p>
+        <p id="playerPace">${playerList[radio1].pace} </p>
+        <p id="playerShooting">${playerList[radio1].shooting} </p>
+        <p id="playerPassing">${playerList[radio1].passing} </p>
+        <p id="playerDribbling">${playerList[radio1].dribbling} </p>
+        <p id="playerDefence">${playerList[radio1].defence} </p>
+        <p id="playerPhysical">${playerList[radio1].physical} </p>
+        <p id="playerOverall">${myPlayerOverall}</p>`;
+
+
 
         var radio2 = document.querySelector('input[name="compare2"]:checked').value;
 
         console.log(radio2);
 
-        var selected2 = document.getElementById("player2");
-        selected2.innerHTML = `<p>Name: ${opponentList[radio2].name} </p> <p>Age: ${opponentList[radio2].age} </p> <p>Position: ${opponentList[radio2].position} </p>
-        <p>Pace: ${playerList[radio1].pace} </p><p>Shooting: ${playerList[radio1].shooting} </p><p>Passing: ${playerList[radio1].passing} </p>
-        <p>Dribbling: ${playerList[radio1].dribbling} </p><p>Defence: ${playerList[radio1].defence} </p><p>Physical: ${playerList[radio1].physical} </p>`;
+        var wishlistOverall = Math.ceil((parseInt(opponentList[radio2].pace) 
+        + parseInt(opponentList[radio2].shooting) 
+        + parseInt(opponentList[radio2].passing) 
+        + parseInt(opponentList[radio2].dribbling) 
+        + parseInt(opponentList[radio2].defence) 
+        + parseInt(opponentList[radio2].physical)) / 6);
 
+        console.log("Wishlist overall = " + wishlistOverall);
+
+
+
+        var selected2 = document.getElementById("player2");
+        selected2.innerHTML = `<p>${opponentList[radio2].name} </p> 
+        <p>${opponentList[radio2].age} </p> 
+        <p>${opponentList[radio2].position} </p>
+        <p id="oppPace">${opponentList[radio2].pace} </p>
+        <p id="oppShooting">${opponentList[radio2].shooting} </p>
+        <p id="oppPassing">${opponentList[radio2].passing} </p>
+        <p id="oppDribbling">${opponentList[radio2].dribbling} </p>
+        <p id="oppDefence">${opponentList[radio2].defence} </p>
+        <p id="oppPhysical">${opponentList[radio2].physical} </p> 
+        <p id="oppOverall">${wishlistOverall}</p>`;
+
+        /*var myPlayerOverall = Math.ceil((parseInt(playerList[radio1].pace) + parseInt(playerList[radio1].shooting) + parseInt(playerList[radio1].passing) + 
+        parseInt(playerList[radio1].dribbling) + parseInt(playerList[radio1].defence) + parseInt(playerList[radio1].physical)) / 6);
+
+        console.log("my player overall = " + myPlayerOverall);
+
+        var wishlistOverall = Math.ceil((parseInt(opponentList[radio2].pace) + parseInt(opponentList[radio2].shooting) + parseInt(opponentList[radio2].passing) + 
+        parseInt(opponentList[radio2].dribbling) + parseInt(opponentList[radio2].defence) + parseInt(opponentList[radio2].physical)) / 6);
+
+        console.log("Wishlist overall = " + wishlistOverall);*/
+
+        if (playerList[radio1].pace > opponentList[radio2].pace){
+            document.getElementById("playerPace").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppPace").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPace").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].pace < opponentList[radio2].pace){
+            document.getElementById("playerPace").style.color = "#FFFFFF";
+            document.getElementById("playerPace").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPace").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerPace").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppPace").style.backgroundColor = "#FFFFFF";
+        }
+        ///////////
+        if (playerList[radio1].shooting > opponentList[radio2].shooting){
+            document.getElementById("playerShooting").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppShooting").style.backgroundColor = "#FF0049";
+            document.getElementById("oppShooting").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].shooting < opponentList[radio2].shooting){
+            document.getElementById("playerShooting").style.color = "#FFFFFF";
+            document.getElementById("playerShooting").style.backgroundColor = "#FF0049";
+            document.getElementById("oppShooting").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerShooting").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppShooting").style.backgroundColor = "#FFFFFF";
+        }
+        ////////////////
+        if (playerList[radio1].passing > opponentList[radio2].passing){
+            document.getElementById("playerPassing").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppPassing").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPassing").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].passing < opponentList[radio2].passing){
+            document.getElementById("playerPassing").style.color = "#FFFFFF";
+            document.getElementById("playerPassing").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPassing").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerPassing").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppPassing").style.backgroundColor = "#FFFFFF";
+        }
+        ////////////
+        if (playerList[radio1].dribbling > opponentList[radio2].dribbling){
+            document.getElementById("playerDribbling").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppDribbling").style.backgroundColor = "#FF0049";
+            document.getElementById("oppDribbling").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].dribbling < opponentList[radio2].dribbling){
+            document.getElementById("playerDribbling").style.color = "#FFFFFF";
+            document.getElementById("playerDribbling").style.backgroundColor = "#FF0049";
+            document.getElementById("oppDribbling").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerDribbling").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppDribbling").style.backgroundColor = "#FFFFFF";
+        }
+        ////////////////
+        if (playerList[radio1].defence > opponentList[radio2].defence){
+            document.getElementById("playerDefence").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppDefence").style.backgroundColor = "#FF0049";
+            document.getElementById("oppDefence").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].defence < opponentList[radio2].defence){
+            document.getElementById("playerDefence").style.color = "#FFFFFF";
+            document.getElementById("playerDefence").style.backgroundColor = "#FF0049";
+            document.getElementById("oppDefence").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerDefence").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppDefence").style.backgroundColor = "#FFFFFF";
+        }
+
+        ////////////////
+        if (playerList[radio1].physical > opponentList[radio2].physical){
+            document.getElementById("playerPhysical").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppPhysical").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPhysical").style.color = "#FFFFFF";
+
+        } else if (playerList[radio1].physical < opponentList[radio2].physical){
+            document.getElementById("playerPhysical").style.color = "#FFFFFF";
+            document.getElementById("playerPhysical").style.backgroundColor = "#FF0049";
+            document.getElementById("oppPhysical").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerPhysical").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppPhysical").style.backgroundColor = "#FFFFFF";
+        }
+
+        ////////////////
+        if (myPlayerOverall > wishlistOverall){
+            document.getElementById("playerOverall").style.backgroundColor = "#7CFC00";
+            document.getElementById("oppOverall").style.backgroundColor = "#FF0049";
+            document.getElementById("oppOverall").style.color = "#FFFFFF";
+
+        } else if (myPlayerOverall < wishlistOverall){
+            document.getElementById("playerOverall").style.color = "#FFFFFF";
+            document.getElementById("playerOverall").style.backgroundColor = "#FF0049";
+            document.getElementById("oppOverall").style.backgroundColor = "#7CFC00";
+        }else{
+            document.getElementById("playerOverall").style.backgroundColor = "#FFFFFF";
+            document.getElementById("oppOverall").style.backgroundColor = "#FFFFFF";
+        }
+
+        var result = document.getElementById("result-display");
+
+        if (myPlayerOverall > wishlistOverall){
+            result.innerHTML = `<p> ${playerList[radio1].name} is the better player.</p>`;
+
+        }else{
+            result.innerHTML = `<p> ${opponentList[radio2].name} is the better player. </p>`;
+        }
+        
+        
     } 
    
-
-
-
-
-
-
+   
 
 }
