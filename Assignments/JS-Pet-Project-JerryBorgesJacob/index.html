@@ -13,7 +13,7 @@
     <body>
         
         <header id="header">
-            <!--img id="banner" src="football-pitch-banner.svg" alt="top-view of a football pitch"-->
+            
             <h1>FIFA TRANSFER WISHLIST</h1>
         </header>
 
@@ -36,12 +36,7 @@
                     </div>
                     
                     <div class="element">
-                        <!--
-                        <label for="position">Position </label>
-                        <input type="text" id="position" name="position">
-
-                        -->
-
+                     
                         <label for="position">Position</label> 
                         <select name="position" id="position"> 
                             <option value="X">Choose a Position</option>
@@ -96,7 +91,7 @@
                     
                 </div>
 
-                <span id="horizontal-line"></span>
+                <span id="vertical-line"></span>
 
                 <div class="form" id="form2">
                     <h2>Wishlist Players</h2>
@@ -113,9 +108,6 @@
                     </div>
                     
                     <div class="element">
-                        <!--
-                        <label for="position">Position </label>
-                        <input type="text" id="position2" name="position">-->
 
                         <label for="position">Position</label> 
                         <select name="position" id="position2"> 
@@ -171,6 +163,9 @@
                     
                 </div>
             </div>
+        <div id="scroll">
+            <p>&darr; Scroll Down &darr;</p>
+        </div>    
 
         
 
@@ -230,7 +225,7 @@
         <button type="button" id="comparison">COMPARE</button>
     </div>    
 
-        <div class="compare-container">
+        <div id="compare-container">
             
             <div id = "player1">
 
@@ -254,10 +249,20 @@
             </div>
         </div>
 
-        <div class="better-player">
+        <div id="better-player">
             <div id="result-display">
                 
             </div>
+        </div>
+
+        <div id="data-error">
+            <div id="error-text">
+                
+            </div>
+            <div class="button-flex">
+                <button type="button" id="restart">RESTART</button>
+            </div>    
+        
         </div>
 
         

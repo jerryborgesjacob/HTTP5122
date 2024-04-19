@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Varela&display=swap');
 
+/*font for whole document*/
 html{
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
@@ -22,6 +23,8 @@ h1{
 h2 {
     font-size: 24px;
 }
+
+/*form section*/
 .form-container{
     display: flex;
     flex-direction: row;
@@ -32,7 +35,7 @@ h2 {
     
 }
 
-#horizontal-line{
+#vertical-line{
     background-color: #000;
     width: 3px;
 
@@ -106,7 +109,22 @@ h2 {
   .button-flex{
     display: flex;
     justify-content: center;
-    margin: 5em;
+    margin: 1em;
+    
+}
+
+#scroll{
+  display:flex;
+  justify-content: center;
+  padding: 1px;
+  margin: 0px;
+}
+
+#scroll p{
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+
 }
 
 #comparison {
@@ -162,8 +180,8 @@ h2 {
     padding:5px;
   }
 
-  .compare-container{
-    display: flex;
+  #compare-container{
+    display: none;
     flex-direction: row;
     margin-left: 10em;
     margin-right: 10em;
@@ -178,7 +196,7 @@ h2 {
     text-align: center;
   }
 
-  .better-player{
+  #better-player{
     display:flex;
     justify-content: center;
   }
@@ -187,4 +205,42 @@ h2 {
     text-align: center;
     font-size: 50px;
 
+  }
+
+  #data-error{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #error-text{
+    text-align: center;
+    font-family: "Jersey 20", sans-serif;
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+    
+  }
+
+  #restart {
+    font-family: "Jersey 20", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    margin:1em 1em;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #restart:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
   }
